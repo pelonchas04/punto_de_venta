@@ -2,10 +2,10 @@
 <p>Centro de desarrollo del proyecto "Punto de venta" desarrollado para restaurantes.</p>
 <tabel>
   <tr>
-    <td style="padding: 0px 20px;">Eric García</td>
-    <td style="padding: 0px 20px;">Eliezer Milián</td>
-    <td style="padding: 0px 20px;">Andrea Pérez</td>
-    <td style="padding: 0px 20px;">Elmer Collí</td>
+    <td style="padding: 0% 20%;">Eric García</td>
+    <td style="padding: 0% 20%;">Eliezer Milián</td>
+    <td style="padding: 0% 20%;">Andrea Pérez</td>
+    <td style="padding: 0% 20%;">Elmer Collí</td>
   </tr>
   <tr>
     <td></td>
