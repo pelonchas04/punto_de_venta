@@ -1,7 +1,7 @@
 <h1>Punto de venta</h1>
 <p>Centro de desarrollo del proyecto "Punto de venta" desarrollado para restaurantes.</p>
 <tabel>
-  <tr>
+  <tr sytle="padding: 10px;">
     <td>Eric García</td>
     <td>Eliezer Milián</td>
     <td>Andrea Pérez</td>
