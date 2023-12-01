@@ -54,7 +54,7 @@ ROOT_URLCONF = 'punto_de_venta.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['C:\Escritorio\punto_de_venta\punto_de_venta\login\Plantillas login'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
