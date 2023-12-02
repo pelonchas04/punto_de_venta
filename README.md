@@ -7,5 +7,9 @@
     <td>Eliezer Milián</td>
     <td>Andrea Pérez</td>
     <td>Elmer Collí</td>
+  </tr>
+  <tr>
+    <td><img src="https://bolavip.com/__export/1670702633190/sites/bolavip/img/2022/12/10/cbum_1.png_242310155.png" alt="Eric García"></td>
+  </tr>
 </table>
 <p>jhututufugyu</p>
