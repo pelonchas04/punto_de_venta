@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!DOCTYPE html>  <!--No se encuntra en uso-->
 <html lang="es">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documento</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
     <!-- Estilos CSS incorporados -->
     <style>
@@ -21,7 +21,7 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            background: url('img1.jpg') no-repeat;
+            background: url("{% static 'login/img1.jpg' %}") no-repeat;
             background-size: cover;
             background-position: center;
         }
@@ -39,7 +39,7 @@
         }
 
         form .title {
-            color: #ffffff;
+            color: #fff;
             font-size: 35px;
             font-weight: 800;
             margin-bottom: 30px;
@@ -51,7 +51,7 @@
 
         form label .fa-solid {
             font-size: 20px;
-            color: #ffffff;
+            color: #fff;
             margin-right: 10px;
         }
 
@@ -75,29 +75,36 @@
             margin-bottom: 15px;
         }
 
-        form input {
+        form button {
             color: #000000;
             border: 2px solid rgba(255, 255, 255, 0.2);
             background: #ffff;
-            padding: 25px 15px;
-            font-size: 30px;
+            padding: 20px 15px;
+            font-size: 25px;
             border-radius: 25px;
         }
+        #logiar{
+            border-radius: 50%;
+            height: 40px;
+        }
+        .invalido{
+            border: solid;
+            color: red;
+        }
     </style>
-
 </head>
 <body>
-    <form action="/index/" method="get">
+    <form action="/inicio/" method="GET">
         <h1 class="title">Login</h1>
         <label for="username">
             <i class="fa-solid fa-user"></i>
-            <input placeholder="Usuario" type="text" name="username">      
+            <input placeholder="Usuario" type="text" id="username" name="usuario">      
         </label>
         <label for="password">
-            <i class="fa-solid fa-lock"></i>            
-            <input placeholder="Contraseña" type="password" name="password">
+            <i class="fa-solid fa-lock"></i>
+            <input placeholder="Contraseña" type="password" id="password" name="contraseña">
         </label>
-        <input type="submit" value="Iniciar">
+        <input type="submit" id="logiar" value="logiar">
     </form>
 
     <!-- Script JavaScript incorporado -->

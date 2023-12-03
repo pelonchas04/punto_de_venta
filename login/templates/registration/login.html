@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+    <!--En caso de tener un error se muestra el siguiente mensaje.-->
+    {% if form.errors %}
+        <p>Usuario o contraseña incorrectos</p>
+        <p>Vuelve a intentarlo</p>
+    <!--En caso no hay errores o es la primera vez se muestra un mensaje diferente.-->
+    {% else %}
+        <p>Por favor ingrese su contraseña</p>
+    {% endif %}
+    <!--Se crea un formulario que envia la info. a la vista relacionada a login, la cual es la que django nos proporciona. ubicada en urls.py dentro de la carpeta login-->
+    <form action="{% url 'login' %}" method="post">
+        <!--widget_tweaks es una aplicacion de django para poder ejecutar de mejor manera los formularios tipo post-->
+        {% load widget_tweaks %}
+        <!--Ejecutamos un form para poder mostrar uno a uno todos los campos de debe de cumplir el formulario-->
+        {% for field in form %}
+            {{field.label_tag}}
+            <!--Podemos aplicar css con la asignacion "+="-->
+            {% render_field field class+="ingreso"%}
+        {% endfor %}
+        <!--csrf_token es un sistema de seguridad de django para los formularios-->
+        {% csrf_token %}
+        <!--input tipe="submit" para enviar los datos a la busqueda y tipe="hidden", value="{{next}}" para enviar a la siguiente plantilla si ya esta logiado-->
+        <input type="submit" value="Log-in">
+        <input type="hidden" name="next" value="{{next}}" />
+    </form>
+
+</body>
+</html>
