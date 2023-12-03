@@ -17,9 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
-from index import views
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('login.urls')),# llamamos a las vistas guardadas en cada aplicacion del proyecto
-    path('index/', include('index.urls'))
+    #path('admin/', admin.site.urls),
+    path('account/', include('login.urls')),# llamamos a las vistas guardadas en cada aplicacion del proyecto
+    path('index/', include('index.urls')),
 ]
