@@ -90,8 +90,8 @@ Servers\Laragon.MySQL\LogFileDml<|||>3<|||>0
 Servers\Laragon.MySQL\LogFilePath<|||>1<|||>C:\Users\Administrator\AppData\Roaming\HeidiSQL\Logs\%session\%db\%y%m%d.sql
 Servers\Laragon.MySQL\RefusedCount<|||>3<|||>2
 Servers\Laragon.MySQL\ServerVersionFull<|||>1<|||>8.0.30 - MySQL Community Server - GPL
-Servers\Laragon.MySQL\ConnectCount<|||>3<|||>10
+Servers\Laragon.MySQL\ConnectCount<|||>3<|||>11
 Servers\Laragon.MySQL\ServerVersion<|||>3<|||>80030
-Servers\Laragon.MySQL\LastConnect<|||>1<|||>2023-11-30 11:06:59
+Servers\Laragon.MySQL\LastConnect<|||>1<|||>2023-12-04 17:37:41
 Servers\Laragon.MySQL\lastUsedDB<|||>1<|||>punto de venta
 Servers\Laragon.MySQL\django|auth_user\Sort<|||>1<|||>0_password|

@@ -18,7 +18,8 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-    #path('admin/', admin.site.urls),
-    path('account/', include('login.urls')),# llamamos a las vistas guardadas en cada aplicacion del proyecto
+    path('admin/', admin.site.urls),
+    path('account/', include('login.urls')),
     path('index/', include('index.urls')),
+    path('Comer Aqui/', include('ComerAqui.urls'))
 ]

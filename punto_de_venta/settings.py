@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'ComerAqui',
     'login',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -57,7 +58,7 @@ ROOT_URLCONF = 'punto_de_venta.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/Escritorio/punto_de_venta/punto_de_venta/login/templates/login', 'C:/Escritorio/punto_de_venta/punto_de_venta/index/templates/index'],
+        'DIRS': ['C:/Escritorio/punto_de_venta/punto_de_venta/login/templates/login', 'C:/Escritorio/punto_de_venta/punto_de_venta/index/templates/index', 'C:/Escritorio/punto_de_venta/punto_de_venta/ComerAqui/templates/ComerAqui'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

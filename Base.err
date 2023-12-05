@@ -1,0 +1,14 @@
+2023-12-04T23:37:31.519685Z 0 [Warning] [MY-010097] [Server] Insecure configuration for --secure-file-priv: Current value does not restrict location of generated files. Consider setting it to a valid, non-empty path.
+2023-12-04T23:37:31.520085Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2023-12-04T23:37:31.520137Z 0 [System] [MY-010116] [Server] C:\Escritorio\punto_de_venta\punto_de_venta\Base de datos\laragon\bin\mysql\mysql-8.0.30-winx64\bin\mysqld (mysqld 8.0.30) starting as process 25636
+2023-12-04T23:37:31.598837Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2023-12-04T23:37:32.467335Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2023-12-04T23:37:32.914979Z 0 [System] [MY-010229] [Server] Starting XA crash recovery...
+2023-12-04T23:37:32.924375Z 0 [System] [MY-010232] [Server] XA crash recovery finished.
+2023-12-04T23:37:33.038699Z 0 [Warning] [MY-013829] [Server] Missing data directory for ICU regular expressions: C:\Escritorio\punto_de_venta\punto_de_venta\Base de datos\laragon\bin\mysql\mysql-8.0.30-winx64\lib\private\.
+2023-12-04T23:37:33.052659Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2023-12-04T23:37:33.053242Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2023-12-04T23:37:33.055721Z 0 [ERROR] [MY-010262] [Server] Can't start server: Bind on TCP/IP port: Solo se permite un uso de cada dirección de socket (protocolo/dirección de red/puerto) 
+2023-12-04T23:37:33.056660Z 0 [ERROR] [MY-010257] [Server] Do you already have another mysqld server running on port: 3306 ?
+2023-12-04T23:37:33.057320Z 0 [ERROR] [MY-010119] [Server] Aborting
+2023-12-04T23:37:34.324420Z 0 [System] [MY-010910] [Server] C:\Escritorio\punto_de_venta\punto_de_venta\Base de datos\laragon\bin\mysql\mysql-8.0.30-winx64\bin\mysqld: Shutdown complete (mysqld 8.0.30)  MySQL Community Server - GPL.

@@ -1,0 +1,11 @@
+<html>
+    <body>
+        <h1>Cantidad de mesas: {{MesasTotales|length}}</h1>
+        {% for mesa in MesasTotales %}
+            <p>Mesa {{mesa.Get_numero}}</p>
+            {% if mesa.Get_descripcion %}
+                <p>{{mesa.Get_descripcion}}</p>
+            {% endif %}
+        {% endfor %}
+    </body>
+</html>
