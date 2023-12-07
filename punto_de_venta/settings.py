@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'punto_de_venta.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'punto de venta',
+        'NAME': 'punto_de_venta',
         'USER': 'root',
         'PASSWORD': '',
         'HOST': 'localhost',

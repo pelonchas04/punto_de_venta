@@ -1,5 +1,5 @@
 from django.shortcuts import render
-#from django.http import HttpResponse
+from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from index.forms import IngresoMesas
 
@@ -17,3 +17,7 @@ def IngresarMesas(request):
     else:
         nueva = IngresoMesas()
     return render(request, 'Ingresar_mesa.html', {'formulario_mesa': nueva})
+
+@login_required
+def ModificarMesa(request):
+    return HttpResponse("Modificador de contraseñas")

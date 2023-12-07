@@ -1,37 +1,105 @@
-
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <!--{% load static %}-->
+    {% load static %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Login</title>
+
+    <!-- Estilos CSS incorporados -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: url("{% static 'login/Img1.jpg' %}") no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            background: transparent;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15.0px);
+            color: #fff;
+            text-align: center;
+            padding: 50px 25px;
+            border-radius: 15px;
+        }
+
+        form .title {
+            color: #ffffff;
+            font-size: 35px;
+            font-weight: 800;
+            margin-bottom: 30px;
+        }
+
+        form label {
+            margin-bottom: 35px;
+        }
+
+        form label .fa-solid {
+            font-size: 20px;
+            color: #ffffff;
+            margin-right: 10px;
+        }
+
+        .ingreso {
+            outline: none;
+            color: #ffffff;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            background-color: transparent;
+            border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+            padding: 10px 15px;
+            font-size: 17px;
+            border-radius: 15px;
+        }
+
+        .ingreso::placeholder {
+            color: #fff;
+        }
+
+        form .link {
+            color: #252525;
+            margin-bottom: 15px;
+        }
+
+        form input {
+            color: #000000;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            background: #ffff;
+            padding: 25px 15px;
+            font-size: 30px;
+            border-radius: 25px;
+        }
+    </style>
+
 </head>
 <body>
-    <!--En caso de tener un error se muestra el siguiente mensaje.-->
-    {% if form.errors %}
-        <p>Usuario o contraseña incorrectos</p>
-        <p>Vuelve a intentarlo</p>
-    <!--En caso no hay errores o es la primera vez se muestra un mensaje diferente.-->
-    {% else %}
-        <p>Por favor ingrese su contraseña</p>
-    {% endif %}
-    <!--Se crea un formulario que envia la info. a la vista relacionada a login, la cual es la que django nos proporciona. ubicada en urls.py dentro de la carpeta login-->
     <form action="{% url 'login' %}" method="post">
-        <!--widget_tweaks es una aplicacion de django para poder ejecutar de mejor manera los formularios tipo post-->
         {% load widget_tweaks %}
-        <!--Ejecutamos un form para poder mostrar uno a uno todos los campos de debe de cumplir el formulario-->
-        {% for field in form %}
-            {{field.label_tag}}
-            <!--Podemos aplicar css con la asignacion "+="-->
-            {% render_field field class+="ingreso"%}
-        {% endfor %}
-        <!--csrf_token es un sistema de seguridad de django para los formularios-->
+        <h1 class="title">Login</h1>
+        <label for="username">
+            <i class="fa-solid fa-user"></i>
+            {% render_field form.username class+="ingreso" placeholder+="Usuario" %}
+        </label>
+        <label for="password">
+            <i class="fa-solid fa-lock"></i>            
+            {% render_field form.password class+="ingreso" placeholder+="Contraseña" %}
+        </label>
+        <input type="submit" value="Iniciar">
         {% csrf_token %}
-        <!--input tipe="submit" para enviar los datos a la busqueda y tipe="hidden", value="{{next}}" para enviar a la siguiente plantilla si ya esta logiado-->
-        <input type="submit" value="Log-in">
-        <input type="hidden" name="next" value="{{next}}" />
     </form>
-
 </body>
 </html>

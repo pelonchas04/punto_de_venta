@@ -1,17 +1,22 @@
 <html>
     <body>
         <p>Ingresa una mesa nueva</p>
-
-        {% if form.errors %}
-            <p>Este número de mesa ya esta ingresado</a>
-        {% endif %}
-
         <div>
             <form method="post">
                 {% load widget_tweaks %}
-                {{ formulario_mesa.numero_mesa.label_tag }} {% render_field formulario_mesa.numero_mesa %}
-                {{ formulario_mesa.descripcion.label_tag }} {% render_field formulario_mesa.descripcion %}
+                {{ formulario_mesa.numero_mesa.label_tag }} 
+                <br>
+                {% render_field formulario_mesa.numero_mesa %}
+                <br>
+                {{ formulario_mesa.descripcion.label_tag }} 
+                <br>
+                {% render_field formulario_mesa.descripcion %}
+                <br>
+                {{ formulario_mesa.habilitado.label_tag }} 
+                <br>
+                {% render_field formulario_mesa.habilitado %}
                 {% csrf_token %}
+                <br>
                 <input type="submit" value="Ingresar mesa"> 
             </form>
         </div>
